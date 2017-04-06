@@ -1,0 +1,42 @@
+body {
+    background-image: url("./images/main_background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#intro,
+#intro-name {
+    position: absolute;
+    color: #FFF;
+    letter-spacing: 2px;
+}
+
+#intro {
+    top: 30%;
+    left: 45%;
+}
+
+#intro-name {
+    top: 45%;
+    left: 45%;
+}
+
+#enter {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    background: rgba(0, 0, 0, 0.5);
+    color: #FFF;
+    padding: 5px 60px;
+    border: 2px solid darkgreen;
+}
+
+button:focus {
+    outline: none;
+    border: none;
+}
+
+#content1 {
+    position: relative;
+    top: 100vh;
+}
