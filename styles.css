@@ -85,6 +85,11 @@ body {
     /*text-align: left;*/
 }
 
+.entered{
+	background: #61B8DE;
+    color: #EFEFEF;
+}
+
 .content {
     max-width: 35%;
     min-height: 100vh;
@@ -95,6 +100,31 @@ body {
     position: relative;
     padding: 150px 15px;
     color: #FFF;
+}
+
+#scores-content{
+	margin-left:-60px;
+}
+
+#scores-content td{
+	padding:5px;
+	border-left: 3px solid red;
+}
+
+#scores-content tr th{
+	padding: 4px;
+}
+
+#scores-content tr{
+	border-bottom: 3px solid lightblue;
+}
+
+#scores-content tr:first-child{
+	background: red;
+}
+
+#scores-content td:last-child{
+	border-right: 3px solid red;
 }
 
 #about-list{
@@ -108,3 +138,5 @@ body {
 a:visited{
 	color:inherit;
 }
+
+
