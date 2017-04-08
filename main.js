@@ -4,6 +4,14 @@ $(document).ready(function() {
         return false;
     })
 
+    $('#right-menu ul li a').click(function(e){
+										  
+		// If a link has been clicked, scroll the page to the link's hash target:
+		
+		$.scrollTo( this.hash || 0, 1500);
+		e.preventDefault();
+	});
+
     $('#about-content').on('mouseenter',function(){
     	$('#item1').addClass('entered')
     });
