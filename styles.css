@@ -10,6 +10,12 @@ body {
     background: rgba(255, 255, 255, 0.1);
 }
 
+#menu-bar {
+    display: none;
+}
+
+/*intro quote section*/
+
 #left-line1,
 #left-line2,
 #left-line3 {
@@ -36,23 +42,25 @@ body {
     background: rgba(255, 83, 13, 0.7);
 }
 
+#intro-section{
+    position: absolute;
+    top:30%;
+    left:45%;
+}
+
 #intro,
 #intro-name {
-    position: absolute;
+    position: relative;
     color: #FFF;
     letter-spacing: 2px;
     font-size: 25px;
 }
 
-#intro {
-    top: 30%;
-    left: 45%;
-}
 
-#intro-name {
-    top: 45%;
-    left: 45%;
-}
+/*intro quote section*/
+
+
+/*menu section*/
 
 #right-menu {
     position: fixed;
@@ -85,148 +93,226 @@ body {
     /*text-align: left;*/
 }
 
-.entered{
-	background: #61B8DE;
+.entered {
+    background: #61B8DE;
     color: #EFEFEF;
 }
+
+
+/*menu section*/
+
+
+/*page content*/
 
 .content {
     max-width: 46%;
     min-height: 100vh;
     word-wrap: break-word;
-    background: rgba(0, 0, 0);
-    top: 475px;
-    left: 540px;
+    top: 100vh;
+    left: 40%;
     position: relative;
     padding: 150px 15px;
     color: #FFF;
 }
 
-#scores-content{
-	margin-left:-60px;
+#scores-content {
+    margin-left: -60px;
 }
 
-/*#scores-content td{
-	padding:5px;
-	border-left: 3px solid red;
+#contribution-content {
+    margin-top: -140px;
 }
 
-#scores-content tr th{
-	padding: 4px;
+#about-content ul {
+    padding-left: 0;
 }
 
-#scores-content tr{
-	border-bottom: 3px solid lightblue;
+#about-list {
+    list-style-type: none;
 }
 
-#scores-content tr:first-child{
-	background: red;
+#about-list li {
+    padding: 10px;
+    font-size: 18px;
 }
 
-#scores-content td:last-child{
-	border-right: 3px solid red;
-}*/
-
-#about-list{
-	list-style-type: none;
-}
-#about-list li{
-	padding:10px;
-	font-size: 18px;
+a:visited,
+a {
+    color: inherit;
 }
 
-a:visited , a{
-	color:inherit;
 
+/*page content*/
+
+
+/* media queries */
+
+@media (max-width: 767px) {
+    html {
+        background: url("./images/main_background.jpg") no-repeat top left fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    #left-line1,
+    #left-line2,
+    #left-line3 {
+        display: none;
+    }
+    #menu-bar {
+        display: block;
+        position: fixed;
+        top: 0;
+        min-width: 100vw;
+        background: #F7C478;
+        text-align: center;
+        padding: 9px 0px;
+        z-index: 1;
+    }
+    #right-menu {
+        position: fixed;
+        background: none !important;
+        color: #61B8DE;
+        right: 0;
+        top: 40px;
+        min-width: 100vw;
+        z-index: 1;
+    }
+    #right-menu ul {
+        list-style-type: none;
+        padding-left: 0;
+        background: rgba(0, 0, 0, 0.8);
+    }
+    #right-menu ul li {
+        display: inline-block;
+        /*padding: 5px 5px;*/
+        padding: 5px 21px;
+        cursor: pointer;
+        text-align: right;
+        font-size: auto;
+    }
+    #right-menu ul li:nth-child(4),
+    #right-menu ul li:nth-child(5) {
+        padding: 5px 40px;
+    }
+    .content {
+        min-width: 100vw;
+        min-height: 100vh;
+        word-wrap: break-word;
+        top: 600px;
+        background: rgba(0,0,0,0.5);
+        left: 0px;
+        position: relative;
+        padding: 50px 15px 15px 15px;
+    }
+    #scores-content {
+        max-width: 200px !important;
+    }
+    #about-content ul li{
+        justify-content: justify;
+        background: rgba(255,255,255,0.5)
+    }
 }
+
+
+/* media queries */
 
 
 /*tables*/
+
 .rwd-table {
-  margin: 1em 0;
-  min-width: 300px;
+    margin: 1em 0;
+    min-width: 300px;
 }
+
 .rwd-table tr {
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
 }
+
 .rwd-table th {
-  display: none;
-}
-.rwd-table td {
-  display: block;
-}
-.rwd-table td:first-child {
-  padding-top: .5em;
-}
-.rwd-table td:last-child {
-  padding-bottom: .5em;
-}
-.rwd-table td:before {
-  content: attr(data-th) ": ";
-  font-weight: bold;
-  width: 6.5em;
-  display: inline-block;
-}
-@media (min-width: 480px) {
-  .rwd-table td:before {
     display: none;
-  }
 }
+
+.rwd-table td {
+    display: block;
+}
+
+.rwd-table td:first-child {
+    padding-top: .5em;
+}
+
+.rwd-table td:last-child {
+    padding-bottom: .5em;
+}
+
+.rwd-table td:before {
+    content: attr(data-th) ": ";
+    font-weight: bold;
+    width: 6.5em;
+    display: inline-block;
+}
+
+@media (min-width: 480px) {
+    .rwd-table td:before {
+        display: none;
+    }
+}
+
 .rwd-table th,
 .rwd-table td {
-  text-align: left;
+    text-align: left;
 }
+
 @media (min-width: 480px) {
-  .rwd-table th,
-  .rwd-table td {
-    display: table-cell;
-    padding: .25em .5em;
-  }
-  .rwd-table th:first-child,
-  .rwd-table td:first-child {
-    padding-left: 0;
-  }
-  .rwd-table th:last-child,
-  .rwd-table td:last-child {
-    padding-right: 0;
-  }
+    .rwd-table th,
+    .rwd-table td {
+        display: table-cell;
+        padding: .25em .5em;
+    }
+    .rwd-table th:first-child,
+    .rwd-table td:first-child {
+        padding-left: 0;
+    }
+    .rwd-table th:last-child,
+    .rwd-table td:last-child {
+        padding-right: 0;
+    }
 }
 
 body {
-  padding: 0 2em;
-  font-family: Montserrat, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  color: #444;
-}
-
-h1 {
-  font-weight: normal;
-  letter-spacing: -1px;
-  color: #34495E;
+    /*padding: 0 2em;*/
+    font-family: Montserrat, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    color: #444;
 }
 
 .rwd-table {
-  background: #34495E;
-  color: #fff;
-  border-radius: .4em;
-  overflow: hidden;
+    background: #34495E;
+    color: #fff;
+    border-radius: .4em;
+    overflow: hidden;
 }
+
 .rwd-table tr {
-  border-color: #46637f;
+    border-color: #46637f;
 }
+
 .rwd-table th,
 .rwd-table td {
-  margin: .5em 1em;
+    margin: .5em 1em;
 }
+
 @media (min-width: 480px) {
-  .rwd-table th,
-  .rwd-table td {
-    padding: 5px !important;
-  }
+    .rwd-table th,
+    .rwd-table td {
+        padding: 5px !important;
+    }
 }
+
 .rwd-table th,
 .rwd-table td:before {
-  color: #dd5;
+    color: #dd5;
 }

@@ -46,4 +46,8 @@ $(document).ready(function() {
     $('#Life-Story-content').on('mouseleave',function(){
     	$('#item5').removeClass('entered')
     });
+
+   $( "#menu-bar" ).click(function() {
+	  $( "#right-menu" ).toggle("slow");
+	});
 });
