@@ -4,15 +4,33 @@ html {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    font-family: 'Lobster', cursive;
 }
 
 body {
     background: rgba(255, 255, 255, 0.1);
+    margin: 0 !important;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.8);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.8);
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    background-color: #5790EC;
+    outline: 1px solid slategrey;
 }
 
 #menu-bar {
     display: none;
 }
+
 
 /*intro quote section*/
 
@@ -42,18 +60,32 @@ body {
     background: rgba(255, 83, 13, 0.7);
 }
 
-#intro-section{
+#intro-section {
     position: absolute;
-    top:30%;
-    left:45%;
+    top: 30%;
+    left: 40%;
 }
 
 #intro,
 #intro-name {
     position: relative;
     color: #FFF;
-    letter-spacing: 2px;
-    font-size: 25px;
+    letter-spacing: 5px;
+    font-size: 35px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+#intro-name {
+    top: 40px;
+    /*left: -30px;*/
+}
+
+#intro-name:before {
+    content: "\201C";
+}
+
+#intro-name:after {
+    content: "\201D";
 }
 
 
@@ -74,13 +106,20 @@ body {
 #right-menu ul {
     list-style-type: none;
     padding-left: 0;
+    margin: 0;
 }
 
 #right-menu ul li {
-    padding: 45px 25px;
+    padding: 45px 15px;
     cursor: pointer;
     text-align: right;
-    font-size: 25px;
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+
+#right-menu ul li:nth-child(1) {
+    /*margin-top:55px;*/
 }
 
 #right-menu ul li:hover {
@@ -90,7 +129,7 @@ body {
     /*font-weight: bold;*/
     /*border-right: 15px solid rgba(255, 83, 13, 0.7);*/
     /*border-top: 15px solid rgba(255, 83, 13, 0.7);*/
-    /*text-align: left;*/
+    text-align: left;
 }
 
 .entered {
@@ -111,24 +150,52 @@ body {
     top: 100vh;
     left: 40%;
     position: relative;
-    padding: 150px 15px;
+    padding: 15px 15px;
+    font-family: 'Lobster', cursive;
     color: #FFF;
+    letter-spacing: 3px;
 }
 
 #scores-content {
     margin-left: -60px;
+    left: 28% !important;
 }
 
-#contribution-content {
-    margin-top: -140px;
-}
-
-#about-content ul {
-    padding-left: 0;
-}
-
+#awards-content ul,
+#Life-Story-content ul,
 #about-list {
     list-style-type: none;
+}
+
+#awards-content ul li {
+    padding: 15px;
+    margin: 25px 5px;
+    background: #EFECCA;
+    border-radius: 5px;
+    letter-spacing: 3px;
+    color: #046380;
+    font-family: 'Orbitron', sans-serif;
+    cursor: default;
+}
+
+#contribution-content,
+#about-content,
+#Life-Story-content {
+    letter-spacing: 3px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+#contribution-content div {
+    margin: 20px 0px;
+}
+
+#about-content ul,
+#scores-content table,
+#contribution-content div,
+#awards-content ul,
+#Life-Story-content ul {
+    padding: 15px;
 }
 
 #about-list li {
@@ -136,9 +203,21 @@ body {
     font-size: 18px;
 }
 
+#Life-Story-content ul li {
+    padding: 15px;
+}
+
+#Life-Story-content ul li:nth-child(1),
+#Life-Story-content ul li:nth-child(3) {
+    background: #5790EC;
+    color: #F2DFC7;
+    border-radius: 10px;
+}
+
 a:visited,
 a {
     color: inherit;
+    text-decoration: none;
 }
 
 
@@ -160,6 +239,21 @@ a {
     #left-line3 {
         display: none;
     }
+    #intro-section {
+        top: 10%;
+        left: 10%;
+    }
+    #intro,
+    #intro-name {
+        position: relative;
+        color: #FFF;
+        letter-spacing: 5px;
+        font-size: 45px;
+        font-family: 'Orbitron', sans-serif;
+    }
+    #intro-name {
+        top: 40px;
+    }
     #menu-bar {
         display: block;
         position: fixed;
@@ -175,7 +269,7 @@ a {
         background: none !important;
         color: #61B8DE;
         right: 0;
-        top: 40px;
+        top: 35px;
         min-width: 100vw;
         z-index: 1;
     }
@@ -201,17 +295,19 @@ a {
         min-height: 100vh;
         word-wrap: break-word;
         top: 600px;
-        background: rgba(0,0,0,0.5);
+        background: rgba(0, 0, 0, 0.5);
         left: 0px;
         position: relative;
-        padding: 50px 15px 15px 15px;
+        padding: 50px 0px 15px;
     }
     #scores-content {
         max-width: 200px !important;
+        margin-left: 0;
+        left: 0 !important;
     }
-    #about-content ul li{
+    #about-content ul li {
         justify-content: justify;
-        background: rgba(255,255,255,0.5)
+        background: rgba(255, 255, 255, 0.5)
     }
 }
 
@@ -250,7 +346,7 @@ a {
 .rwd-table td:before {
     content: attr(data-th) ": ";
     font-weight: bold;
-    width: 6.5em;
+    width: 9.5em;
     display: inline-block;
 }
 
